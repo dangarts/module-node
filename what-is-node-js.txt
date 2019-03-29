@@ -41,3 +41,4 @@ List of companies using node.js
 
 // 3. Draw a diagram of a full-stack web application and its key components.
 
+https://raw.githubusercontent.com/dangarts/module-node/master/js-key-components.jpg
