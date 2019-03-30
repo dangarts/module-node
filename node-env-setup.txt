@@ -1,0 +1,23 @@
+# EXERCISE
+
+1. What is npm and what does it do?
+
+NPM stands for node package manager and manages all sorts of packages that can be used in an application.  "NPM" used at a terminal prompt, can instruct installation of packages,  
+
+2. What kind of information does package.json hold?
+
+Package.json, is a file created when initializing via "npm init".  This file consists of information in key/value format.  This includes:
+
+- The name of the application
+- Version #
+- Application description.  Listed in 'npm searh'
+- Main JS file - entry point
+- default 'test' for the application
+- keywords used in 'npm search'
+- Package licence.  This is specified so that people know how they are permitted to use it and if any restrictions are placed on it.
+- Author or contributers to the application
+- Dependencies - This manages and keeps track of packages in a application.
+
+
+3. Google another Node package. Using the demo directory run npm install <theNameOfThePackage> --save. Check the contents of your package.json file to make sure that the dependencies list the name of the Node package.
+
