@@ -21,3 +21,8 @@ Package.json, is a file created when initializing via "npm init".  This file con
 
 3. Google another Node package. Using the demo directory run npm install <theNameOfThePackage> --save. Check the contents of your package.json file to make sure that the dependencies list the name of the Node package.
 
+Babel core installed.
+
+https://github.com/dangarts/module-node/blob/master/package-babel.png
+
+
