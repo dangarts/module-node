@@ -1,0 +1,25 @@
+# EXERCISES
+
+1. How do you access the DevTools for Node in Chrome?
+
+- type 'chrome://inspect/' in a chrome url field
+- select 'open dedicated devTools for node'
+- add 'debugger' in the source file to communicate to devTools a breakpoint to stop
+- in terminal, run `node  --inspect source-file.js'
+
+
+2. What are the  main differences between the regular Chrome DevTools and the DevTools for Node?
+
+Node's Devtools has historically been harder to debug due to limited resources available to debug code.  Chrome's debugger is much easier to debug node programs.  Chrome's debugger is accessed via the CHrome browser's node devTool options while the node debugger is accessed from the terminal.  
+
+
+3. Using the built-in Node debug tool, what command do you use to continue the execution of your code.
+
+'cont' or 'c'
+
+
+4. Which statement do you put in your code to set a breakpoint?
+
+`debugger`
+
+
