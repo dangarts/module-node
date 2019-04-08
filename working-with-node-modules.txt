@@ -1,0 +1,39 @@
+#EXERCISES
+
+1. How do you import a module?
+
+- Create a JS file containing code  which is encapsulated with `module.exports`  This makes properties and methods available outside of the module.
+- In the main JS file(index.js), use the `require/import` function to import the module created in the first step
+
+
+
+2. What Javascript statement do you use to export a module?
+
+module.exports = {
+  //methods go here 
+};
+
+
+#ONLINE RESEARCH QUESTIONS
+
+1. Are there other ways to export a module?
+
+- exports.method = function() {…} 
+- module.exports.method = function() {…}
+
+
+2. What are ES6 modules and how do they differ from the module we created in this checkpoint?
+
+ES6 modules are also chunks of reusable JS code.  They are available for use when the the module file exports them. This leads to a 2 module system provided for developers:
+
+1. require() from nodeJS
+- dynamic loading of modules if it is truly required
+- loading is syncronous
+
+2. import from es6
+- code is selectively loaded
+- import is asyncronous (allows slightly better performance)
+
+
+#CODE CHALLENGE
+

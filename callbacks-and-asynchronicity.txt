@@ -1,0 +1,88 @@
+# EXERCISES
+
+1. What is the difference between readirSync and readdir?
+
+`readdirSync` is blocking and syncronous
+`readdir` is non-blocking and asyncrounous
+
+
+2. What is the event loop and how does it handle asyncrouous requests?
+
+3. Given the following code, specify whether the program is asyncronous and non-blocking or synchronous and blocking or synchronous and non-blocking.  
+
+```
+const fs = require('fs');
+const file = fs.readFileSync('foo.txt');
+console.log(file.toString());
+```
+
+syncronous and blocking
+
+
+4. Given the following code, specify whether the program is asynchronous and non-blocking or synchronous and blocking or synchronous and non-blocking.
+
+```
+const fs = require('fs');
+fs.readFile('foo.txt', (err, file) => {
+ if (err) throw err;
+ console.log(file.toString());
+});
+console.log("test");
+```
+
+asyncronous and non-blocking
+
+
+5. In what order will the console.log statements execute in the code below?
+
+```
+const fs = require('fs');
+fs.readFile('foo.txt', (err, file) => {
+ if (err) throw err;
+ console.log("A");
+ console.log("B")
+});
+console.log("C");
+```
+
+C / A / B
+
+
+6. `setTimeOut` is a JS function which calls a function after a set amount of milliseconds.  Given the following code, explain in what sequence the functions will run and why? 
+
+```
+function greeting() {
+ setTimeout(() => {
+   console.log("friend");
+ }, 100);
+}
+
+function hello(){
+ console.log("hello");
+}
+
+greeting();
+hello();
+```
+
+- greeting fn invoked
+- setTimeout fn invoked
+- setTimeout placed in webapi for 1s before placed in event queue
+- hello fn invoked
+- console prints "hello"
+- stack is cleared and first item in event queue ready to be executed
+- console prints "friend"
+
+
+7. Create a function which utilizes a callback. Make sure to add console.log statements to understand when your callback function is called.
+
+function countToFive(startCount, callback) {
+   console.log(startCount);
+   callback();
+}
+
+function remainder(){
+   console.log('4,5');
+}
+
+countToFive('1,2,3', remainder);
